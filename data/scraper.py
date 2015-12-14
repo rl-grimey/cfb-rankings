@@ -16,7 +16,7 @@ for i in range(1,16):
         col = row.find_all('td')
 
         rank = col[0].text
-        team = col[1].text
+        team = col[1].find(text=True)
         record = col[2].text
 
         rankings[counter] = {"week":week, "rank":rank, "team":team, "record":record}
