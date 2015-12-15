@@ -84,10 +84,19 @@
             .attr("class", "line")
             .attr("d", function(d) { return line(d.values); })
             .style("stroke", function(d) { return d.key === "Iowa" ? "#FBC02D" : "#333" })
+            .on("mouseover", function(d) {
+                d3.select(this).transition()
+                    .duration(250)
+                    .style("stroke", "#4CAF50")
+            })
+        .on("mouseout", function(d) {
+             d3.select(this).transition()
+                 .duration(100)
+                 .style("stroke", function(d) { return d.key === "Iowa" ? "#FBC02D" : "#333" });
+        })
             .append("title")
                 .text(function(d) { return d.key; });
     });
-
 
     </script>
 </body>
