@@ -1,17 +1,15 @@
 from bs4 import BeautifulSoup
-from urllib2 import urlopen
-import csv
+import requests, csv
 
-rankings = {}
-counter = 0
-for i in range(1,16):
-    week = i
+rankings = []
+def scraper(week):
 
-    url = 'http://espn.go.com/college-football/rankings/_/poll/seasontype/2/year/2015/week/{}'.format(week)
-    page = urlopen(url).read()
-    soup = BeautifulSoup(page)
-
+    url = 'http://espn.go.com/college-football/rankings/_/poll/1/seasontype/2/year/2015/week/{}'.format(week)
+    page = requests.get(url)
+    soup = BeautifulSoup(page.text)
     table = soup.find('table')
+    #print (table)
+
     for row in table.find_all('tr')[1:26]:
         col = row.find_all('td')
 
@@ -19,13 +17,15 @@ for i in range(1,16):
         team = col[1].find(text=True)
         record = col[2].text
 
-        rankings[counter] = {"week":week, "rank":rank, "team":team, "record":record}
-        counter += 1
+        rankings.append({"week":week, "rank":rank, "team":team, "record":record})
+        print (rankings[-1]) #sanity check
 
+for i in range(1,16):
+    scraper(i)
+
+attrNames = ["rank", "team", "record", "week"]
 with open("2015-rankings.csv", "wb") as outfile:
-    attrNames = ["rank", "team", "record", "week"]
     writer = csv.DictWriter(outfile, fieldnames = attrNames)
 
     writer.writeheader()
-    for row in rankings:
-        writer.writerow(rankings[row])
+    writer.writerows(rankings)
