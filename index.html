@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Bump Chart</title>
+
+    <script type="text/javascript" src="js/d3.js"></script>
+
+    <style>
+    body {
+        font-family: sans-serif;
+    }
+    .axis path,
+    .axis line {
+        fill: none;
+        stroke: #333;
+        shape-rendering: crispEdges;
+    }
+    .line {
+        fill: none;
+        stroke-width: 2.5px;
+    }
+    </style>
+</head>
+
+<body>
+    <script>
+    var margin = {"left":25, "top":25, "right":25, "bottom":25},
+        width = 960 - margin.left - margin.right,
+        height = 500 - margin.top - margin.bottom;
+
+    var weekScale = d3.scale.linear().domain([1,15]).range([0, width]),
+        rankScale = d3.scale.linear().domain([1,25]).range([0, height]);
+
+    var weekAxis = d3.svg.axis()
+            .orient("bottom")
+            .scale(weekScale)
+            .ticks(15)
+            .tickSize(-height),
+        rankAxis = d3.svg.axis()
+            .orient("left")
+            .scale(rankScale)
+            .ticks(25);
+
+    var line = d3.svg.line()
+        .x(function(d) { return weekScale(+d.week); })
+        .y(function(d) { return rankScale(+d.rank); })
+        .interpolate("linear");
+
+    var svg = d3.select("body").append("svg")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+            .append("g")
+        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+    d3.csv("data/2015-rankings.csv", function(data) {
+
+        svg.append("g")
+            .attr("class", "week axis")
+            .attr("transform", "translate(0," + height + ")")
+            .call(weekAxis);
+        svg.append("g")
+            .attr("class", "rank axis")
+            .call(rankAxis)
+            .append("text")
+                .attr("transform", "rotate(-90)")
+                .attr("y", 6)
+                .attr("dy", ".75em")
+                .style("text-anchor", "end")
+                .text("Team Ranking")
+        var teams = d3.nest()
+                .key(function(d) { return d.team; })
+                .sortValues(function(a, b){ return a.week - b.week; })
+                .entries(data);
+        teams = teams.filter(function(d) { return +d.values[d.values.length-1].week === 15; })
+
+        var rankings = svg.selectAll(".team")
+            .data(teams)
+            .enter().append("g")
+            .attr("class", "team");
+        rankings.append("path")
+            .attr("class", "line")
+            .attr("d", function(d) { return line(d.values); })
+            .style("stroke", function(d) { return d.key === "Iowa" ? "#FBC02D" : "#333" })
+            .append("title")
+                .text(function(d) { return d.key; });
+    });
+
+
+    </script>
+</body>
+</html>
