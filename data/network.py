@@ -16,6 +16,12 @@ for row in csv.DictReader(f):
 for team in rankings:
     for week in range(1,16):
         if week in rankings[team]:
-            continue
+            outList.append(rankings[team][week])
         else:
             rankings[team][week] = {"team":team,"rank":"", "week":week, "record":""}
+            outList.append(rankings[team][week])
+
+with open("filled-rankings.csv", "wb") as outfile:
+    writer = csv.DictWriter(outfile, fieldnames = ["rank", "team", "week", "record"])
+    writer.writeheader()
+    writer.writerows(outList)
