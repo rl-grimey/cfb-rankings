@@ -1,38 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
-
-    <title>Bump Chart</title>
+    <title>NCAA College Football Bump Chart</title>
 
     <script type="text/javascript" src="js/d3.js"></script>
-
     <style>
-    body {
-        font-family: sans-serif;
-    }
-    .axis path,
-    .axis line {
-        fill: none;
-        stroke: #333;
-        shape-rendering: crispEdges;
-    }
-    .line {
-        fill: none;
-        stroke-width: 2.5px;
-    }
+        body text {
+            font: 11px 'Gill Sans', 'Gill Sans MT', Calibri, sans-serif;
+            fill: #fff;
+        }
+
+        .title {
+            text-align: middle;
+            font-size: 18px;
+        }
+        .axis path,
+        .axis line {
+            fill: none;
+            stroke: #fff;
+            stroke-width: 2.5px;
+            shape-rendering: crispEdges;
+        }
+
+        .line {
+            fill: none;
+        }
+        #chart {
+            margin: auto;
+        }
     </style>
 </head>
 
 <body>
+    <div id="chart"></div>
     <script>
-    var margin = {"left":25, "top":25, "right":25, "bottom":25},
-        width = 960 - margin.left - margin.right,
+    var margin = {"left":25, "top":40, "right":110, "bottom":35},
+        width = 1000 - margin.left - margin.right,
         height = 500 - margin.top - margin.bottom;
 
     var weekScale = d3.scale.linear().domain([1,15]).range([0, width]),
-        rankScale = d3.scale.linear().domain([1,25]).range([0, height]);
+        rankScale = d3.scale.linear().domain([1,25]).range([0, height]),
+        colorScale = d3.scale.ordinal().domain(["Alabama", "Baylor", "Clemson", "Florida", "Florida State", "Houston", "Iowa", "LSU", "Michigain", "Michigain State", "Navy", "Northwestern", "Notre Dame", "Ohio State", "Oklahoma", "Oklahoma State", "Ole Miss", 'Oregon', "Stanford", "TCU", "Temple", "Utah", "Western Kentucky", "Wisconsin"]).range(["#A32638", "#003015", "#F66733", "#005496", "#782F40", "#C8102E", "#FFE100", "#461D7C", "#00274c", "#18453B", "#000080", "#5b3b8c", "#002b5b", "#bb0000", "#841617", "#FF6600", "#c8102e", "#154733", "#8C1515", "#4d1979", "#A41E35", "#cc0000", "#B01E24", "#b70101"]);
 
     var weekAxis = d3.svg.axis()
             .orient("bottom")
@@ -42,20 +51,35 @@
         rankAxis = d3.svg.axis()
             .orient("left")
             .scale(rankScale)
-            .ticks(25);
+            .ticks(25)
+            .tickSize(4);
 
     var line = d3.svg.line()
+        .defined(function(d) { return d.rank > 0; })
         .x(function(d) { return weekScale(+d.week); })
         .y(function(d) { return rankScale(+d.rank); })
         .interpolate("linear");
-
-    var svg = d3.select("body").append("svg")
+    var svg = d3.select("#chart").append("svg")
         .attr("width", width + margin.left + margin.right)
         .attr("height", height + margin.top + margin.bottom)
             .append("g")
         .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+    svg.append("rect") //Football rect
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+        .attr("fill", "#74c476")
+        .attr("transform", "translate(" + -margin.left + "," + -margin.top + ")");
 
-    d3.csv("data/2015-rankings.csv", function(data) {
+    d3.csv("data/filled-rankings.csv", function(data) {
+        data.forEach(function(d) {
+            d.rank = +d.rank;
+            d.week = +d.week;
+            d.id = d.team.replace(" ", "");
+        });
+        var teams = d3.nest()
+            .key(function(d) { return d.team; })
+            .sortValues(function(a, b){ return a.week - b.week; })
+            .entries(data);
 
         svg.append("g")
             .attr("class", "week axis")
@@ -65,38 +89,104 @@
             .attr("class", "rank axis")
             .call(rankAxis)
             .append("text")
-                .attr("transform", "rotate(-90)")
-                .attr("y", 6)
-                .attr("dy", ".75em")
-                .style("text-anchor", "end")
+                //.attr("transform", "rotate(-90)")
+                .attr("y", -12)
+                .attr("dx", -16)
+                .style("text-anchor", "start")
                 .text("Team Ranking")
-        var teams = d3.nest()
-                .key(function(d) { return d.team; })
-                .sortValues(function(a, b){ return a.week - b.week; })
-                .entries(data);
-        teams = teams.filter(function(d) { return +d.values[d.values.length-1].week === 15; })
 
-        var rankings = svg.selectAll(".team")
+        var lines = svg.selectAll(".team")
             .data(teams)
             .enter().append("g")
             .attr("class", "team");
-        rankings.append("path")
-            .attr("class", "line")
+        lines.append("path")
+            .attr("class", function(d) { return "line " + d.key; })
             .attr("d", function(d) { return line(d.values); })
-            .style("stroke", function(d) { return d.key === "Iowa" ? "#FBC02D" : "#333" })
-            .on("mouseover", function(d) {
-                d3.select(this).transition()
-                    .duration(250)
-                    .style("stroke", "#4CAF50")
-            })
-        .on("mouseout", function(d) {
-             d3.select(this).transition()
-                 .duration(100)
-                 .style("stroke", function(d) { return d.key === "Iowa" ? "#FBC02D" : "#333" });
-        })
+            .style("stroke",  "#333")
+            .style("opacity", 0.35)
+            .style("stroke-width", "2px")
+            .on("mouseover", highlight())
+            .on("mouseout", normal())
             .append("title")
                 .text(function(d) { return d.key; });
+        lines.append("text")
+            .filter(function(d) { return d.values[d.values.length -1].rank > 0; })
+            .attr("x", width + 4)
+            .attr("y", function(d) { return rankScale(d.values[d.values.length -1].rank) +4; })
+            .text(function(d) { return d.key; });
+
+        var dots = svg.selectAll(".dot")
+            .data(data)
+            .enter().append("g")
+            .attr("class", "dot")
+            .filter(function(d) { return d.rank > 0});
+        dots.append("circle")
+            .attr("class", function(d) { return d.id; })
+            .attr("cx", function(d) { return weekScale(d.week); })
+            .attr("cy", function(d) { return rankScale(d.rank); })
+            .attr("r", 2.25)
+            .style("fill", "#333")
+            .style("opacity", 0.35)
+            .append("title")
+                .text(function(d) { return d.team; });
+
+    function highlight () {
+        return function() {
+            var temp;
+            d3.select(this).transition().duration(250)
+                .style("stroke", function(d) { temp = d.key.replace(" ", ""); return colorScale(d.key); })
+                .style("opacity", 0.9)
+                .style("stroke-width", 2.75);
+            dots.append("text")
+                .filter(function(d) { return d.id === temp; })
+                .attr("class", "temp")
+                .attr("x", function(d) { return weekScale(d.week) -23; })
+                .attr("y", function(d) { return rankScale(d.rank) -4; })
+                .style("opacity", 0)
+                .text(function(d) { return d.record; })
+                .transition()
+                .duration(250)
+                .style("opacity", 1);
+            d3.selectAll("circle")
+                .filter(function(d) { return d.id === temp; })
+                .transition()
+                .duration(250)
+                .style("fill", function(d) { return colorScale(d.team); })
+                .each(function() { return d3.selectAll("circle")
+                        .filter(function(d) { return d.id === temp; })
+                        .transition().duration(250)
+                        .attr("r", 3.75)
+                        .each(function() { return d3.selectAll("circle")
+                                .filter(function(d) { return d.id === temp; })
+                                .transition()
+                                .duration(250)
+                                .style("opacity", 0.9);
+                        }); });
+        };
+    }
+    function normal () {
+        return function() {
+            var temp;
+            d3.selectAll(".temp").transition().duration(100).style("opacity", function(d) {temp = d.id;return 0; }).remove();
+            d3.select(this).transition().duration(100)
+                .style("stroke", "#333")
+                .style("stroke-width", "2px")
+                .style("opacity", 0.35);
+            d3.selectAll("circle").filter(function(d) { return d.id === temp; }).transition().duration(100).style("fill", "#333").each(function() {
+                return d3.selectAll("circle").filter(function(d) { return d.id === temp; }).transition().duration(100).attr("r", 2.25).each(function() {
+                    return d3.selectAll("circle").filter(function(d) { return d.id === temp; }).transition().duration(100).style("opacity", 0.35); });
+            });
+        };
+    }
+
     });
+
+svg.append('text')
+    .attr("class", "title")
+    .attr("x", (width + margin.left + margin.right) / 2)
+    .attr("y", - (margin.top / 2))
+    .style("text-anchor", "middle")
+    .text("NCAA College Football Rankings week by week")
 
     </script>
 </body>
