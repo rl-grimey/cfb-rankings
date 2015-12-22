@@ -24,7 +24,7 @@ for i in range(1,16):
     scraper(i)
 
 attrNames = ["rank", "team", "record", "week"]
-with open("2015-rankings.csv", "wb") as outfile:
+with open("scraped-2015-rankings.csv", "wb") as outfile:
     writer = csv.DictWriter(outfile, fieldnames = attrNames)
 
     writer.writeheader()
