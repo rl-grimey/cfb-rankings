@@ -133,7 +133,7 @@
     function highlight () {
         return function() {
             var temp;
-            d3.select(this).transition().duration(250)
+            d3.select(this).transition().duration(100)
                 .style("stroke", function(d) { temp = d.key.replace(" ", ""); return colorScale(d.key); })
                 .style("opacity", 0.9)
                 .style("stroke-width", 2.75);
@@ -145,16 +145,16 @@
                 .style("opacity", 0)
                 .text(function(d) { return d.record; })
                 .transition()
-                .duration(250)
+                .duration(100)
                 .style("opacity", 1);
             d3.selectAll("circle")
                 .filter(function(d) { return d.id === temp; })
                 .transition()
-                .duration(250)
+                .duration(100)
                 .style("fill", function(d) { return colorScale(d.team); })
                 .each(function() { return d3.selectAll("circle")
                         .filter(function(d) { return d.id === temp; })
-                        .transition().duration(250)
+                        .transition().duration(100)
                         .attr("r", 3.75)
                         .each(function() { return d3.selectAll("circle")
                                 .filter(function(d) { return d.id === temp; })
@@ -167,8 +167,8 @@
     function normal () {
         return function() {
             var temp;
-            d3.selectAll(".temp").transition().duration(100).style("opacity", function(d) {temp = d.id;return 0; }).remove();
-            d3.select(this).transition().duration(100)
+            d3.selectAll(".temp").transition().duration(250).style("opacity", function(d) {temp = d.id;return 0; }).remove();
+            d3.select(this).transition().duration(250)
                 .style("stroke", "#333")
                 .style("stroke-width", "2px")
                 .style("opacity", 0.35);
