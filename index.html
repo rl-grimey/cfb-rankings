@@ -70,7 +70,7 @@
         .attr("fill", "#74c476")
         .attr("transform", "translate(" + -margin.left + "," + -margin.top + ")");
 
-    d3.csv("data/filled-rankings.csv", function(data) {
+    d3.csv("data/formatted-2015-rankings.csv", function(data) {
         data.forEach(function(d) {
             d.rank = +d.rank;
             d.week = +d.week;
