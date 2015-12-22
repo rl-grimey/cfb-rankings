@@ -1,0 +1,691 @@
+rank,team,week,record
+5,Michigan State,1,0-0
+5,Michigan State,2,1-0
+4,Michigan State,3,2-0
+2,Michigan State,4,3-0
+2,Michigan State,5,4-0
+4,Michigan State,6,5-0
+7,Michigan State,7,6-0
+7,Michigan State,8,7-0
+6,Michigan State,9,8-0
+6,Michigan State,10,8-0
+14,Michigan State,11,8-1
+9,Michigan State,12,9-1
+6,Michigan State,13,10-1
+5,Michigan State,14,11-1
+3,Michigan State,15,12-1
+8,USC,1,0-0
+8,USC,2,1-0
+6,USC,3,2-0
+19,USC,4,2-1
+17,USC,5,3-1
+17,USC,6,3-1
+,USC,7,
+,USC,8,
+,USC,9,
+,USC,10,
+,USC,11,
+22,USC,12,7-3
+,USC,13,
+24,USC,14,8-4
+,USC,15,
+19,Oklahoma,1,0-0
+19,Oklahoma,2,1-0
+16,Oklahoma,3,2-0
+15,Oklahoma,4,3-0
+15,Oklahoma,5,3-0
+10,Oklahoma,6,4-0
+19,Oklahoma,7,4-1
+17,Oklahoma,8,5-1
+14,Oklahoma,9,6-1
+14,Oklahoma,10,7-1
+12,Oklahoma,11,8-1
+7,Oklahoma,12,9-1
+5,Oklahoma,13,10-1
+3,Oklahoma,14,11-1
+4,Oklahoma,15,11-1
+18,Arkansas,1,0-0
+18,Arkansas,2,1-0
+,Arkansas,3,
+,Arkansas,4,
+,Arkansas,5,
+,Arkansas,6,
+,Arkansas,7,
+,Arkansas,8,
+,Arkansas,9,
+,Arkansas,10,
+,Arkansas,11,
+,Arkansas,12,
+,Arkansas,13,
+,Arkansas,14,
+,Arkansas,15,
+15,Arizona State,1,0-0
+,Arizona State,2,
+,Arizona State,3,
+,Arizona State,4,
+,Arizona State,5,
+,Arizona State,6,
+,Arizona State,7,
+,Arizona State,8,
+,Arizona State,9,
+,Arizona State,10,
+,Arizona State,11,
+,Arizona State,12,
+,Arizona State,13,
+,Arizona State,14,
+,Arizona State,15,
+,Toledo,1,
+,Toledo,2,
+,Toledo,3,
+,Toledo,4,
+,Toledo,5,
+24,Toledo,6,4-0
+22,Toledo,7,5-0
+19,Toledo,8,6-0
+20,Toledo,9,7-0
+20,Toledo,10,7-0
+,Toledo,11,
+,Toledo,12,
+24,Toledo,13,9-1
+,Toledo,14,
+,Toledo,15,
+,Washington State,1,
+,Washington State,2,
+,Washington State,3,
+,Washington State,4,
+,Washington State,5,
+,Washington State,6,
+,Washington State,7,
+,Washington State,8,
+,Washington State,9,
+,Washington State,10,
+,Washington State,11,
+24,Washington State,12,7-3
+20,Washington State,13,8-3
+,Washington State,14,
+,Washington State,15,
+3,Alabama,1,0-0
+2,Alabama,2,1-0
+2,Alabama,3,2-0
+12,Alabama,4,2-1
+13,Alabama,5,3-1
+8,Alabama,6,4-1
+10,Alabama,7,5-1
+8,Alabama,8,6-1
+7,Alabama,9,7-1
+7,Alabama,10,7-1
+3,Alabama,11,8-1
+3,Alabama,12,9-1
+2,Alabama,13,10-1
+2,Alabama,14,11-1
+2,Alabama,15,12-1
+,Oklahoma State,1,
+,Oklahoma State,2,
+25,Oklahoma State,3,2-0
+24,Oklahoma State,4,3-0
+20,Oklahoma State,5,4-0
+21,Oklahoma State,6,5-0
+16,Oklahoma State,7,6-0
+14,Oklahoma State,8,6-0
+12,Oklahoma State,9,7-0
+12,Oklahoma State,10,8-0
+5,Oklahoma State,11,9-0
+4,Oklahoma State,12,10-0
+9,Oklahoma State,13,10-1
+14,Oklahoma State,14,10-2
+13,Oklahoma State,15,10-2
+,Iowa,1,
+,Iowa,2,
+,Iowa,3,
+,Iowa,4,
+,Iowa,5,
+22,Iowa,6,5-0
+17,Iowa,7,6-0
+12,Iowa,8,7-0
+10,Iowa,9,7-0
+10,Iowa,10,8-0
+8,Iowa,11,9-0
+6,Iowa,12,10-0
+3,Iowa,13,11-0
+4,Iowa,14,12-0
+6,Iowa,15,12-1
+,Pittsburgh,1,
+,Pittsburgh,2,
+,Pittsburgh,3,
+,Pittsburgh,4,
+,Pittsburgh,5,
+,Pittsburgh,6,
+,Pittsburgh,7,
+25,Pittsburgh,8,5-1
+23,Pittsburgh,9,6-1
+,Pittsburgh,10,
+,Pittsburgh,11,
+,Pittsburgh,12,
+,Pittsburgh,13,
+,Pittsburgh,14,
+,Pittsburgh,15,
+,Michigan,1,
+,Michigan,2,
+,Michigan,3,
+,Michigan,4,
+22,Michigan,5,3-1
+18,Michigan,6,4-1
+12,Michigan,7,5-1
+15,Michigan,8,5-2
+15,Michigan,9,5-2
+16,Michigan,10,6-2
+15,Michigan,11,7-2
+14,Michigan,12,8-2
+12,Michigan,13,9-2
+19,Michigan,14,9-3
+17,Michigan,15,9-3
+2,TCU,1,0-0
+3,TCU,2,1-0
+3,TCU,3,2-0
+4,TCU,4,3-0
+4,TCU,5,4-0
+2,TCU,6,5-0
+3,TCU,7,6-0
+4,TCU,8,7-0
+5,TCU,9,7-0
+5,TCU,10,8-0
+13,TCU,11,8-1
+11,TCU,12,9-1
+15,TCU,13,9-2
+11,TCU,14,10-2
+11,TCU,15,10-2
+,Utah,1,
+24,Utah,2,1-0
+21,Utah,3,2-0
+18,Utah,4,3-0
+10,Utah,5,4-0
+5,Utah,6,4-0
+4,Utah,7,5-0
+3,Utah,8,6-0
+13,Utah,9,6-1
+13,Utah,10,7-1
+10,Utah,11,8-1
+18,Utah,12,8-2
+,Utah,13,
+21,Utah,14,9-3
+20,Utah,15,9-3
+7,Oregon,1,0-0
+7,Oregon,2,1-0
+12,Oregon,3,1-1
+13,Oregon,4,2-1
+,Oregon,5,
+,Oregon,6,
+,Oregon,7,
+,Oregon,8,
+,Oregon,9,
+,Oregon,10,
+,Oregon,11,
+23,Oregon,12,7-3
+18,Oregon,13,8-3
+15,Oregon,14,9-3
+15,Oregon,15,9-3
+,Temple,1,
+,Temple,2,
+,Temple,3,
+,Temple,4,
+,Temple,5,
+,Temple,6,
+,Temple,7,
+22,Temple,8,6-0
+21,Temple,9,7-0
+23,Temple,10,7-1
+21,Temple,11,8-1
+,Temple,12,
+25,Temple,13,9-2
+20,Temple,14,10-2
+24,Temple,15,10-3
+10,Florida State,1,0-0
+11,Florida State,2,1-0
+9,Florida State,3,2-0
+10,Florida State,4,3-0
+11,Florida State,5,3-0
+12,Florida State,6,4-0
+11,Florida State,7,5-0
+9,Florida State,8,6-0
+17,Florida State,9,6-1
+17,Florida State,10,7-1
+19,Florida State,11,7-2
+16,Florida State,12,8-2
+14,Florida State,13,9-2
+10,Florida State,14,10-2
+9,Florida State,15,10-2
+14,LSU,1,0-0
+14,LSU,2,0-0
+13,LSU,3,1-0
+8,LSU,4,2-0
+9,LSU,5,3-0
+7,LSU,6,4-0
+6,LSU,7,5-0
+5,LSU,8,6-0
+4,LSU,9,7-0
+4,LSU,10,7-0
+9,LSU,11,7-1
+17,LSU,12,7-2
+,LSU,13,
+23,LSU,14,8-3
+22,LSU,15,8-3
+,California,1,
+,California,2,
+,California,3,
+,California,4,
+24,California,5,4-0
+23,California,6,5-0
+23,California,7,5-1
+20,California,8,5-1
+,California,9,
+,California,10,
+,California,11,
+,California,12,
+,California,13,
+,California,14,
+,California,15,
+,West Virginia,1,
+,West Virginia,2,
+,West Virginia,3,
+,West Virginia,4,
+23,West Virginia,5,3-0
+,West Virginia,6,
+,West Virginia,7,
+,West Virginia,8,
+,West Virginia,9,
+,West Virginia,10,
+,West Virginia,11,
+,West Virginia,12,
+,West Virginia,13,
+,West Virginia,14,
+,West Virginia,15,
+1,Ohio State,1,0-0
+1,Ohio State,2,1-0
+1,Ohio State,3,2-0
+1,Ohio State,4,3-0
+1,Ohio State,5,4-0
+1,Ohio State,6,5-0
+1,Ohio State,7,6-0
+1,Ohio State,8,7-0
+1,Ohio State,9,8-0
+1,Ohio State,10,8-0
+2,Ohio State,11,9-0
+2,Ohio State,12,10-0
+8,Ohio State,13,10-1
+6,Ohio State,14,11-1
+7,Ohio State,15,11-1
+,Memphis,1,
+,Memphis,2,
+,Memphis,3,
+,Memphis,4,
+,Memphis,5,
+,Memphis,6,
+,Memphis,7,
+18,Memphis,8,6-0
+16,Memphis,9,7-0
+15,Memphis,10,8-0
+25,Memphis,11,8-1
+,Memphis,12,
+,Memphis,13,
+,Memphis,14,
+,Memphis,15,
+,Northwestern,1,
+,Northwestern,2,
+23,Northwestern,3,2-0
+17,Northwestern,4,3-0
+16,Northwestern,5,4-0
+13,Northwestern,6,5-0
+20,Northwestern,7,5-1
+,Northwestern,8,
+,Northwestern,9,
+,Northwestern,10,
+24,Northwestern,11,7-2
+20,Northwestern,12,8-2
+17,Northwestern,13,9-2
+13,Northwestern,14,10-2
+12,Northwestern,15,10-2
+9,Georgia,1,0-0
+10,Georgia,2,1-0
+7,Georgia,3,2-0
+7,Georgia,4,3-0
+8,Georgia,5,4-0
+19,Georgia,6,4-1
+,Georgia,7,
+,Georgia,8,
+,Georgia,9,
+,Georgia,10,
+,Georgia,11,
+,Georgia,12,
+,Georgia,13,
+,Georgia,14,
+,Georgia,15,
+21,Stanford,1,0-0
+,Stanford,2,
+,Stanford,3,
+21,Stanford,4,2-1
+18,Stanford,5,3-1
+16,Stanford,6,4-1
+15,Stanford,7,4-1
+10,Stanford,8,5-1
+8,Stanford,9,6-1
+9,Stanford,10,7-1
+7,Stanford,11,8-1
+15,Stanford,12,8-2
+13,Stanford,13,9-2
+7,Stanford,14,10-2
+5,Stanford,15,11-2
+17,Ole Miss,1,0-0
+17,Ole Miss,2,1-0
+15,Ole Miss,3,2-0
+3,Ole Miss,4,3-0
+3,Ole Miss,5,4-0
+14,Ole Miss,6,4-1
+13,Ole Miss,7,5-1
+24,Ole Miss,8,5-2
+19,Ole Miss,9,6-2
+19,Ole Miss,10,7-2
+,Ole Miss,11,
+25,Ole Miss,12,7-3
+19,Ole Miss,13,8-3
+16,Ole Miss,14,9-3
+16,Ole Miss,15,9-3
+,BYU,1,
+,BYU,2,
+19,BYU,3,2-0
+23,BYU,4,2-1
+,BYU,5,
+,BYU,6,
+,BYU,7,
+,BYU,8,
+,BYU,9,
+,BYU,10,
+,BYU,11,
+,BYU,12,
+,BYU,13,
+,BYU,14,
+,BYU,15,
+,Florida,1,
+,Florida,2,
+,Florida,3,
+,Florida,4,
+25,Florida,5,4-0
+11,Florida,6,5-0
+8,Florida,7,6-0
+13,Florida,8,6-1
+11,Florida,9,6-1
+11,Florida,10,7-1
+11,Florida,11,8-1
+8,Florida,12,9-1
+10,Florida,13,10-1
+18,Florida,14,10-2
+19,Florida,15,10-3
+4,Baylor,1,0-0
+4,Baylor,2,1-0
+5,Baylor,3,2-0
+5,Baylor,4,2-0
+5,Baylor,5,3-0
+3,Baylor,6,4-0
+2,Baylor,7,5-0
+2,Baylor,8,6-0
+2,Baylor,9,7-0
+2,Baylor,10,7-0
+4,Baylor,11,8-0
+10,Baylor,12,8-1
+7,Baylor,13,9-1
+12,Baylor,14,9-2
+18,Baylor,15,9-3
+22,Arizona,1,0-0
+22,Arizona,2,1-0
+20,Arizona,3,2-0
+16,Arizona,4,3-0
+,Arizona,5,
+,Arizona,6,
+,Arizona,7,
+,Arizona,8,
+,Arizona,9,
+,Arizona,10,
+,Arizona,11,
+,Arizona,12,
+,Arizona,13,
+,Arizona,14,
+,Arizona,15,
+24,Missouri,1,0-0
+21,Missouri,2,1-0
+22,Missouri,3,2-0
+25,Missouri,4,3-0
+,Missouri,5,
+,Missouri,6,
+,Missouri,7,
+,Missouri,8,
+,Missouri,9,
+,Missouri,10,
+,Missouri,11,
+,Missouri,12,
+,Missouri,13,
+,Missouri,14,
+,Missouri,15,
+20,Wisconsin,1,0-0
+,Wisconsin,2,
+24,Wisconsin,3,1-1
+22,Wisconsin,4,2-1
+19,Wisconsin,5,3-1
+,Wisconsin,6,
+,Wisconsin,7,
+,Wisconsin,8,
+,Wisconsin,9,
+,Wisconsin,10,
+23,Wisconsin,11,8-2
+21,Wisconsin,12,8-2
+,Wisconsin,13,
+25,Wisconsin,14,9-3
+23,Wisconsin,15,9-3
+12,Clemson,1,0-0
+12,Clemson,2,1-0
+11,Clemson,3,2-0
+11,Clemson,4,3-0
+12,Clemson,5,3-0
+6,Clemson,6,4-0
+5,Clemson,7,5-0
+6,Clemson,8,6-0
+3,Clemson,9,7-0
+3,Clemson,10,8-0
+1,Clemson,11,9-0
+1,Clemson,12,10-0
+1,Clemson,13,11-0
+1,Clemson,14,12-0
+1,Clemson,15,13-0
+,Western Kentucky,1,
+,Western Kentucky,2,
+,Western Kentucky,3,
+,Western Kentucky,4,
+,Western Kentucky,5,
+,Western Kentucky,6,
+,Western Kentucky,7,
+,Western Kentucky,8,
+,Western Kentucky,9,
+,Western Kentucky,10,
+,Western Kentucky,11,
+,Western Kentucky,12,
+,Western Kentucky,13,
+,Western Kentucky,14,
+25,Western Kentucky,15,11-2
+11,Notre Dame,1,0-0
+9,Notre Dame,2,1-0
+8,Notre Dame,3,2-0
+6,Notre Dame,4,3-0
+6,Notre Dame,5,4-0
+15,Notre Dame,6,4-1
+14,Notre Dame,7,5-1
+11,Notre Dame,8,6-1
+9,Notre Dame,9,6-1
+8,Notre Dame,10,7-1
+6,Notre Dame,11,8-1
+5,Notre Dame,12,9-1
+4,Notre Dame,13,10-1
+9,Notre Dame,14,10-2
+8,Notre Dame,15,10-2
+,Duke,1,
+,Duke,2,
+,Duke,3,
+,Duke,4,
+,Duke,5,
+,Duke,6,
+25,Duke,7,5-1
+23,Duke,8,5-1
+22,Duke,9,6-1
+,Duke,10,
+,Duke,11,
+,Duke,12,
+,Duke,13,
+,Duke,14,
+,Duke,15,
+,Houston,1,
+,Houston,2,
+,Houston,3,
+,Houston,4,
+,Houston,5,
+,Houston,6,
+24,Houston,7,5-0
+21,Houston,8,6-0
+18,Houston,9,7-0
+18,Houston,10,8-0
+16,Houston,11,9-0
+13,Houston,12,10-0
+21,Houston,13,10-1
+17,Houston,14,11-1
+14,Houston,15,12-1
+,Mississippi State,1,
+25,Mississippi State,2,1-0
+,Mississippi State,3,
+,Mississippi State,4,
+21,Mississippi State,5,3-1
+,Mississippi State,6,
+,Mississippi State,7,
+,Mississippi State,8,
+25,Mississippi State,9,6-2
+24,Mississippi State,10,6-2
+20,Mississippi State,11,7-2
+,Mississippi State,12,
+23,Mississippi State,13,8-3
+,Mississippi State,14,
+,Mississippi State,15,
+13,UCLA,1,0-0
+13,UCLA,2,1-0
+10,UCLA,3,2-0
+9,UCLA,4,3-0
+7,UCLA,5,4-0
+20,UCLA,6,4-1
+18,UCLA,7,4-1
+,UCLA,8,
+24,UCLA,9,5-2
+22,UCLA,10,6-2
+18,UCLA,11,7-2
+,UCLA,12,
+22,UCLA,13,8-3
+,UCLA,14,
+,UCLA,15,
+,North Carolina,1,
+,North Carolina,2,
+,North Carolina,3,
+,North Carolina,4,
+,North Carolina,5,
+,North Carolina,6,
+,North Carolina,7,
+,North Carolina,8,
+,North Carolina,9,
+21,North Carolina,10,7-1
+17,North Carolina,11,8-1
+12,North Carolina,12,9-1
+11,North Carolina,13,10-1
+8,North Carolina,14,11-1
+10,North Carolina,15,11-2
+6,Auburn,1,0-0
+6,Auburn,2,1-0
+18,Auburn,3,2-0
+,Auburn,4,
+,Auburn,5,
+,Auburn,6,
+,Auburn,7,
+,Auburn,8,
+,Auburn,9,
+,Auburn,10,
+,Auburn,11,
+,Auburn,12,
+,Auburn,13,
+,Auburn,14,
+,Auburn,15,
+16,Georgia Tech,1,0-0
+15,Georgia Tech,2,1-0
+14,Georgia Tech,3,2-0
+20,Georgia Tech,4,2-1
+,Georgia Tech,5,
+,Georgia Tech,6,
+,Georgia Tech,7,
+,Georgia Tech,8,
+,Georgia Tech,9,
+,Georgia Tech,10,
+,Georgia Tech,11,
+,Georgia Tech,12,
+,Georgia Tech,13,
+,Georgia Tech,14,
+,Georgia Tech,15,
+25,Tennessee,1,0-0
+23,Tennessee,2,1-0
+,Tennessee,3,
+,Tennessee,4,
+,Tennessee,5,
+,Tennessee,6,
+,Tennessee,7,
+,Tennessee,8,
+,Tennessee,9,
+,Tennessee,10,
+,Tennessee,11,
+,Tennessee,12,
+,Tennessee,13,
+,Tennessee,14,
+,Tennessee,15,
+,Texas A&M,1,
+16,Texas A&M,2,1-0
+17,Texas A&M,3,2-0
+14,Texas A&M,4,3-0
+14,Texas A&M,5,4-0
+9,Texas A&M,6,5-0
+9,Texas A&M,7,5-0
+16,Texas A&M,8,5-1
+,Texas A&M,9,
+25,Texas A&M,10,6-2
+,Texas A&M,11,
+,Texas A&M,12,
+,Texas A&M,13,
+,Texas A&M,14,
+,Texas A&M,15,
+,Navy,1,
+,Navy,2,
+,Navy,3,
+,Navy,4,
+,Navy,5,
+,Navy,6,
+,Navy,7,
+,Navy,8,
+,Navy,9,
+,Navy,10,
+22,Navy,11,7-1
+19,Navy,12,8-1
+16,Navy,13,9-1
+22,Navy,14,9-2
+21,Navy,15,9-2
+23,Boise State,1,0-0
+20,Boise State,2,1-0
+,Boise State,3,
+,Boise State,4,
+,Boise State,5,
+25,Boise State,6,4-1
+21,Boise State,7,5-1
+,Boise State,8,
+,Boise State,9,
+,Boise State,10,
+,Boise State,11,
+,Boise State,12,
+,Boise State,13,
+,Boise State,14,
+,Boise State,15,
